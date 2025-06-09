@@ -46,10 +46,10 @@ def handle_message(update: Update, context: CallbackContext):
             for i, msg in enumerate(messages, start=1):
                 pan, name, dob = extract_pan_info(msg)
                 formatted = (
-                    f"<code>PAN {i}</code>\n"
-                    f"<code>PAN Number: {pan}</code>\n"
-                    f"<code>Name: {name}</code>\n"
-                    f"<code>DOB: {dob}</code>"
+                    f"PAN {i}\n"
+                    f"PAN Number: <code>{pan}</code>\n"
+                    f"Name: <code>{name}</code>\n"
+                    f"DOB: <code>{dob}</code>"
                 )
                 formatted_msgs.append(formatted)
             full_message = "\n\n".join(formatted_msgs)
